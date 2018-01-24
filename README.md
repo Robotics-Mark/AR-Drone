@@ -25,3 +25,5 @@ https://github.com/kieranwood85/flyvslam
 ##### Different packages developed for Parrot A.R.Drone in the Oceans Systems Lab of Heriot Watt University
 https://github.com/marknabil/hwu_osl_ardrone
 
+##### Mapping large objects using multiple autonomous ARDrones.
+https://github.com/ekelleyv/QuadcopterMapping
