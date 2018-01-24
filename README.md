@@ -21,3 +21,7 @@ https://github.com/caoyuanfenglv/drone_land_ar_pid
 
 ##### Control of an ARDrone using position sensing from on-board cameras.
 https://github.com/kieranwood85/flyvslam
+
+##### Different packages developed for Parrot A.R.Drone in the Oceans Systems Lab of Heriot Watt University
+https://github.com/marknabil/hwu_osl_ardrone
+
