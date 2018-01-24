@@ -18,3 +18,6 @@ https://github.com/NilsL3/AutoNav
 
 ##### Automatic Landing on a Moving Target This is course project in Mobile Robotics Lab Spring 2015, Shanghaitech University.
 https://github.com/caoyuanfenglv/drone_land_ar_pid
+
+##### Control of an ARDrone using position sensing from on-board cameras.
+https://github.com/kieranwood85/flyvslam
