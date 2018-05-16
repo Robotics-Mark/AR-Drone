@@ -1,0 +1,29 @@
+// action server for tracking marker
+
+if (status == TRACKING){
+		status_info = "TRACKING";
+		if (!init_tracker){
+			//Wait for the tracking server to start
+			tracking.waitForServer();
+			info = "tracking initialised";
+
+			//Send a goal to the action
+			visual_servoing::trackingGoal tracking_goal;
+			tracking.sendGoal(tracking_goal, boost::bind(&land::tracking_doneCb, this, _1), track_client::SimpleActiveCallback(), boost::bind(&land::tracking_feedbackCb, this, _1));
+			init_tracker = true;
+		}
+
+		if (!tracking_working){
+	  	info = "Target lost!";
+			status = LOST;
+		}
+
+	} else if (status == LOST){
+		status_info = "LOST";
+		//Wait a while, if found go to TRACKING status again, if not go to the timer lost callback and there to the SEARCHING status
+		if (!tracking_working){
+			timer_lost.start();
+		} else{
+			timer_lost.stop();
+			status = TRACKING;
+		}
